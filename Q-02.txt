@@ -1,0 +1,269 @@
+
+
+#******************* Question - :Plot-1: 0-3 :1995-1998  ********************
+
+
+#******************* Question - :Plot-2: 4-7 :1999-2002  ********************
+
+
+df2 = df[df.Period == 2000]
+print("\n\n--------------[ OUTPUT for 2000 ]----------------------\n\n")
+print(df2[['Location','Period','First Tooltip']])
+
+df3 = df[df.Period == 2001]
+print("\n\n--------------[ OUTPUT for 2001 ]----------------------\n\n")
+print(df3[['Location','Period','First Tooltip']])
+
+df4 = df[df.Period == 2002]
+print("\n\n--------------[ OUTPUT for 2002 ]----------------------\n\n")
+print(df4[['Location','Period','First Tooltip']])
+
+
+i1 = np.arange(len(df2['Location']))
+print(i1)
+
+i2 = np.arange(len(df3['Location']))
+print(i2)
+
+i3 = np.arange(len(df4['Location']))
+print(i3)
+
+#--------------- plot for slot-2 ----------------------
+
+plt.title('Question - : slot-2 : 1999-2002')
+plt.xlabel("Country sl. no --- >")
+plt.ylabel("Number(%) --- >")
+
+
+plt.plot(i1,df2['First Tooltip'],
+            marker='*',
+            markersize=10,
+            linestyle='dashed',
+            label="[2] 2000")
+
+plt.plot(i2,df3['First Tooltip'],
+            marker='+',
+            markersize=10,
+            linestyle='dashed',
+            label="[3] 2001")
+
+plt.plot(i3,df4['First Tooltip'],
+            marker='o',
+            markersize=10,
+            linestyle='dashed',
+            label="[4] 2002")
+
+
+plt.legend()
+plt.show()
+
+
+--------------[ OUTPUT for 2000 ]----------------------
+
+
+                                               Location  Period  First Tooltip
+51                                              Algeria    2000             78
+100                                           Argentina    2000             56
+119                                             Armenia    2000             94
+153                                             Austria    2000             35
+205                                             Bahrain    2000             92
+249                                             Belarus    2000             92
+307                              Bosnia and Herzegovina    2000             74
+332                                              Brazil    2000             95
+351                                   Brunei Darussalam    2000             95
+370                                            Bulgaria    2000             83
+451                                            Colombia    2000             84
+470                                        Cook Islands    2000             70
+544                                             Czechia    2000             98
+628                                               Egypt    2000             97
+667                                             Estonia    2000             89
+832                                             Hungary    2000             99
+891                          Iran (Islamic Republic of)    2000             99
+981                                              Jordan    2000             83
+1000                                         Kazakhstan    2000             98
+1047                                         Kyrgyzstan    2000             96
+1067                                             Latvia    2000             90
+1086                                            Lebanon    2000             56
+1141                                          Lithuania    2000             97
+1213                                   Marshall Islands    2000              6
+1247                                             Mexico    2000             98
+1266                   Micronesia (Federated States of)    2000             50
+1290                                           Mongolia    2000             75
+1398                                               Niue    2000             99
+1417                                             Norway    2000             90
+1436                                               Oman    2000             99
+1465                                              Palau    2000             75
+1484                                             Panama    2000             88
+1539                                             Poland    2000             96
+1558                                           Portugal    2000             48
+1594                                  Republic of Korea    2000             39
+1630                                            Romania    2000             96
+1649                                 Russian Federation    2000             86
+1672                              Saint Kitts and Nevis    2000             99
+1691                                        Saint Lucia    2000             89
+1789                                             Serbia    2000             78
+1830                                          Singapore    2000             98
+1849                                           Slovakia    2000             99
+1868                                           Slovenia    2000             98
+1888                                       South Africa    2000             62
+1953                                             Sweden    2000             94
+1986                               Syrian Arab Republic    2000             80
+2005                                         Tajikistan    2000             59
+2024                                           Thailand    2000             99
+2043          The former Yugoslav Republic of Macedonia    2000             95
+2099                                            Tunisia    2000             98
+2136                                       Turkmenistan    2000             92
+2173                                            Ukraine    2000             99
+2192                               United Arab Emirates    2000             92
+2211  United Kingdom of Great Britain and Northern I...    2000             76
+2235                           United States of America    2000             85
+2260                                         Uzbekistan    2000             98
+
+
+--------------[ OUTPUT for 2001 ]----------------------
+
+
+                                               Location  Period  First Tooltip
+32                                              Albania    2001             90
+50                                              Algeria    2001             73
+99                                            Argentina    2001             56
+118                                             Armenia    2001             96
+152                                             Austria    2001             34
+171                                          Azerbaijan    2001             65
+204                                             Bahrain    2001             99
+230                                            Barbados    2001             12
+248                                             Belarus    2001             97
+306                              Bosnia and Herzegovina    2001             86
+331                                              Brazil    2001             95
+350                                   Brunei Darussalam    2001             95
+369                                            Bulgaria    2001             85
+450                                            Colombia    2001             83
+469                                        Cook Islands    2001             50
+499                                             Croatia    2001             98
+543                                             Czechia    2001             98
+573                                             Denmark    2001             87
+598                                            Dominica    2001             62
+627                                               Egypt    2001             99
+666                                             Estonia    2001             84
+735                                             Georgia    2001              8
+809                                              Guyana    2001             88
+831                                             Hungary    2001             99
+890                          Iran (Islamic Republic of)    2001             94
+909                                                Iraq    2001             52
+927                                              Israel    2001             97
+951                                             Jamaica    2001             96
+980                                              Jordan    2001             87
+999                                          Kazakhstan    2001             95
+                                                ...     ...            ...
+1557                                           Portugal    2001             56
+1593                                  Republic of Korea    2001             67
+1629                                            Romania    2001             97
+1648                                 Russian Federation    2001             88
+1671                              Saint Kitts and Nevis    2001             99
+1690                                        Saint Lucia    2001             73
+1709                   Saint Vincent and the Grenadines    2001             99
+1765                                       Saudi Arabia    2001             96
+1788                                             Serbia    2001             74
+1807                                         Seychelles    2001             98
+1829                                          Singapore    2001             96
+1848                                           Slovakia    2001             99
+1867                                           Slovenia    2001             98
+1887                                       South Africa    2001             54
+1921                                          Sri Lanka    2001             52
+1952                                             Sweden    2001             94
+1985                               Syrian Arab Republic    2001             83
+2004                                         Tajikistan    2001             72
+2023                                           Thailand    2001             86
+2042          The former Yugoslav Republic of Macedonia    2001             94
+2080                                Trinidad and Tobago    2001             80
+2098                                            Tunisia    2001             99
+2117                                             Turkey    2001             91
+2135                                       Turkmenistan    2001             94
+2154                                             Tuvalu    2001             99
+2172                                            Ukraine    2001             98
+2191                               United Arab Emirates    2001             92
+2210  United Kingdom of Great Britain and Northern I...    2001             74
+2234                           United States of America    2001             86
+2259                                         Uzbekistan    2001             98
+
+[77 rows x 3 columns]
+
+
+--------------[ OUTPUT for 2002 ]----------------------
+
+
+                                               Location  Period  First Tooltip
+31                                              Albania    2002             93
+49                                              Algeria    2002             93
+98                                            Argentina    2002             83
+117                                             Armenia    2002             95
+151                                             Austria    2002             39
+170                                          Azerbaijan    2002             67
+203                                             Bahrain    2002             97
+229                                            Barbados    2002             41
+247                                             Belarus    2002             98
+305                              Bosnia and Herzegovina    2002             90
+330                                              Brazil    2002             80
+349                                   Brunei Darussalam    2002             96
+368                                            Bulgaria    2002             79
+449                                            Colombia    2002             93
+468                                        Cook Islands    2002             61
+498                                             Croatia    2002             98
+542                                             Czechia    2002             98
+572                                             Denmark    2002             92
+597                                            Dominica    2002             99
+626                                               Egypt    2002             96
+665                                             Estonia    2002             94
+684                                            Eswatini    2002             99
+734                                             Georgia    2002             40
+752                                             Germany    2002             77
+788                                             Grenada    2002             74
+808                                              Guyana    2002             80
+830                                             Hungary    2002             99
+889                          Iran (Islamic Republic of)    2002             96
+908                                                Iraq    2002             48
+926                                              Israel    2002             97
+                                                ...     ...            ...
+1611                                Republic of Moldova    2002             69
+1628                                            Romania    2002             97
+1647                                 Russian Federation    2002             93
+1670                              Saint Kitts and Nevis    2002             99
+1689                                        Saint Lucia    2002             71
+1708                   Saint Vincent and the Grenadines    2002             99
+1726                                              Samoa    2002             84
+1764                                       Saudi Arabia    2002             96
+1787                                             Serbia    2002             75
+1806                                         Seychelles    2002             99
+1828                                          Singapore    2002             96
+1847                                           Slovakia    2002             99
+1866                                           Slovenia    2002             98
+1886                                       South Africa    2002             46
+1920                                          Sri Lanka    2002             92
+1951                                             Sweden    2002             94
+1984                               Syrian Arab Republic    2002             84
+2003                                         Tajikistan    2002             93
+2022                                           Thailand    2002             89
+2041          The former Yugoslav Republic of Macedonia    2002             95
+2079                                Trinidad and Tobago    2002             77
+2097                                            Tunisia    2002             98
+2116                                             Turkey    2002             83
+2134                                       Turkmenistan    2002             87
+2153                                             Tuvalu    2002             97
+2171                                            Ukraine    2002             98
+2190                               United Arab Emirates    2002             92
+2209  United Kingdom of Great Britain and Northern I...    2002             74
+2233                           United States of America    2002             86
+2258                                         Uzbekistan    2002             97
+
+[84 rows x 3 columns]
+[ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
+ 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49
+ 50 51 52 53 54 55]
+[ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
+ 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49
+ 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74
+ 75 76]
+[ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
+ 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49
+ 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74
+ 75 76 77 78 79 80 81 82 83]
