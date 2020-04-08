@@ -1,0 +1,55 @@
+# -*- coding: utf-8 -*-
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import random
+import pandas
+
+
+df = pd.read_csv("C:/Users/Jeet Das/Desktop/44.csv",encoding="utf-8")
+
+print("\n----------------------- output data :---------------------\n")
+print("Project - 44 ");
+print("\n------------------------------------------------------------\n")
+
+
+# Question – A : get row and column numbers 
+
+print('---------------------------------------------')
+print("Dimension of the data frame = ",df.shape)
+print('---------------------------------------------')
+
+
+----------------------- output data :---------------------
+
+Project - 44 
+
+------------------------------------------------------------
+
+---------------------------------------------
+Dimension of the data frame =  (2305, 4)
+---------------------------------------------
+
+# Question – B : print column names :
+
+print('------------------------\n Column names as follows :')
+print('------------------------\n')
+count = 0
+for col in df.columns: 
+        print(count,"-->",col)
+        count = count+1
+print("\n-----------------------------\n")
+
+
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Location
+1 --> Indicator
+2 --> Period
+3 --> First Tooltip
+
+-----------------------------
+
